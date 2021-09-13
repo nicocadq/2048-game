@@ -4,6 +4,8 @@ import { useDebouncedCallback } from 'hooks/useDebouncedCallback';
 import { useEvent } from 'hooks/useEvent';
 import { ANIMATION_DURATION } from 'utils/constants';
 
+import { ScoreContainer } from './Game.styles';
+
 const Game = () => {
   const { tiles, moves, score } = useGame();
 
@@ -34,10 +36,7 @@ const Game = () => {
 
   return (
     <div>
-      <div>
-        <h1>2048 Game</h1>
-        <p>Score: {score}</p>
-      </div>
+      <ScoreContainer>Score: {score}</ScoreContainer>
       <Board tiles={tiles} />
     </div>
   );
