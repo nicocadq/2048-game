@@ -1,13 +1,16 @@
 import styled from '@emotion/styled';
 
+import { getColors, getSize, getShadows } from 'helpers/tail';
+
 export const Container = styled.div`
-  background-color: #eee4da;
+  background-color: ${({ value }) => getColors(value).background};
   border-radius: 6px;
-  color: #776e65;
-  font-size: 48px;
+  box-shadow: ${({ value }) => getShadows(value).shadow};
+  color: ${({ value }) => getColors(value).color};
+  font-size: ${({ value }) => getSize(value).fontSize}px;
   font-weight: bold;
   text-align: center;
-  line-height: 2.1;
+  line-height: ${({ value }) => getSize(value).lineHeight};
 
   height: 100px;
   margin: 16px;

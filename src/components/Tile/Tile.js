@@ -37,6 +37,7 @@ const Tile = ({ id, position, value }) => {
       left={getPixelsOfPosition(position[0])}
       scale={scale}
       index={id}
+      value={value}
     >
       {value}
     </Container>
