@@ -5,6 +5,7 @@ export const initialState = {
   tilesIds: [],
   hasChanged: false,
   inMotion: false,
+  score: 0,
 };
 
 export const reducer = (state, action) => {
@@ -47,6 +48,7 @@ export const reducer = (state, action) => {
         },
         tilesIds: state.tilesIds.filter((id) => id !== action.origin.id),
         hasChanged: true,
+        score: state.score + (action.origin.value + action.destination.value),
       };
     }
     case types.MOVE_START:

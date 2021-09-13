@@ -5,7 +5,7 @@ import { useEvent } from 'hooks/useEvent';
 import { ANIMATION_DURATION } from 'utils/constants';
 
 const Game = () => {
-  const { tiles, moves } = useGame();
+  const { tiles, moves, score } = useGame();
 
   const onKeyDown = (event) => {
     event.preventDefault();
@@ -34,7 +34,10 @@ const Game = () => {
 
   return (
     <div>
-      <h1>2048 Game</h1>
+      <div>
+        <h1>2048 Game</h1>
+        <p>Score: {score}</p>
+      </div>
       <Board tiles={tiles} />
     </div>
   );

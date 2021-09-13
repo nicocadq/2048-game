@@ -17,7 +17,7 @@ export const useGame = () => {
 
   const isFirstRender = useRef(true);
   const [state, dispatch] = useReducer(reducer, initialState);
-  const { tiles, tilesIds, hasChanged, inMotion } = state;
+  const { tiles, tilesIds, hasChanged, inMotion, score } = state;
 
   const createTile = useCallback(
     ({ position, value }) => {
@@ -260,5 +260,6 @@ export const useGame = () => {
   return {
     tiles: tilesToReturn,
     moves: { left: moveLeft, right: moveRight, up: moveUp, down: moveDown },
+    score,
   };
 };
