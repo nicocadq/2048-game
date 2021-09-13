@@ -18,7 +18,7 @@ export const getTilesIdsByRow = ({ rowIndex, tilesCount, calculateBoard }) => {
   const tilesToShow = calculateBoard();
 
   const tileIdsInRow = [
-    tilesToShow[rowIndex + tilesCount + 0],
+    tilesToShow[rowIndex * tilesCount + 0],
     tilesToShow[rowIndex * tilesCount + 1],
     tilesToShow[rowIndex * tilesCount + 2],
     tilesToShow[rowIndex * tilesCount + 3],

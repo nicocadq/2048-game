@@ -10,7 +10,7 @@ const Board = ({ tiles }) => {
     <BoardContainer>
       <TilesContainer>
         {tiles.map(({ id, position, value }) => (
-          <Tile key={`tile-${id}`} id={id} position={position} value={value} />
+          <Tile key={id} id={id} position={position} value={value} />
         ))}
         <Grid />
       </TilesContainer>
