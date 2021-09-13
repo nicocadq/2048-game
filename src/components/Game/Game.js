@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
-
 import { Board } from 'components/Board';
 import { useGame } from 'hooks/useGame';
 import { useDebouncedCallback } from 'hooks/useDebouncedCallback';
+import { useEvent } from 'hooks/useEvent';
 import { ANIMATION_DURATION } from 'utils/constants';
 
 const Game = () => {
@@ -31,13 +30,7 @@ const Game = () => {
 
   const debouncedHandler = useDebouncedCallback(onKeyDown, ANIMATION_DURATION);
 
-  useEffect(() => {
-    window.addEventListener('keydown', debouncedHandler);
-
-    return () => {
-      window.removeEventListener('keydown', debouncedHandler);
-    };
-  }, [debouncedHandler]);
+  useEvent('keydown', debouncedHandler);
 
   return (
     <div>
