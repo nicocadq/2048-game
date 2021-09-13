@@ -1,0 +1,13 @@
+export const ANIMATION_DURATION = 250;
+
+export const TILES_COUNT = 4;
+
+export const PIXEL_SIZE = 8;
+
+export const TILE_MARGIN = 2 * PIXEL_SIZE;
+export const TILE_WIDTH = 12.5 * PIXEL_SIZE;
+export const TILE_TOTAL_WIDTH = TILE_WIDTH + TILE_MARGIN;
+
+export const CONTAINER_WIDTH = TILE_TOTAL_WIDTH * TILES_COUNT;
+export const BOARD_MARGIN = PIXEL_SIZE * 2;
+export const BOARD_WIDTH = CONTAINER_WIDTH + BOARD_MARGIN;

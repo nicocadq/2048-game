@@ -3,9 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -15,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +38,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest-dom": "^3.2.3",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-testing-library": "^3.8.0",
+    "prettier": "^2.3.2"
   }
 }
