@@ -195,7 +195,7 @@ export const useGame = () => {
   };
 
   const moveUp = () => {
-    const tileIdsByColumn = (columnIndex: number) => {
+    const tileIdsByColumn = (columnIndex) => {
       const tileIdsInColumn = getTilesIdsByColumn({
         columnIndex,
         tilesCount,
@@ -217,7 +217,7 @@ export const useGame = () => {
   };
 
   const moveDown = () => {
-    const tileIdsByColumn = (columnIndex: number) => {
+    const tileIdsByColumn = (columnIndex) => {
       const tileIdsInColumn = getTilesIdsByColumn({
         columnIndex,
         tilesCount,
